@@ -82,6 +82,7 @@
           <th>Fees</th>
 
           <th>Urgency</th>
+          <th>Action</th>
         </tr>
       </thead>
 
@@ -117,6 +118,12 @@
 
           <td>
             {{ patient.urgency }}
+          </td>
+
+          <td>
+            <button class="btn btn-danger" (click)="delete(patient.id)">
+              Delete
+            </button>
           </td>
         </tr>
       </tbody>
