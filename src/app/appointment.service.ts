@@ -20,4 +20,8 @@ export class AppointmentService {
       appointment
     );
   }
+
+  deleteAppointment(id: number): Observable<object> {
+    return this.httpClient.delete(`${this.baseUrl}/appointments/${id}`);
+  }
 }

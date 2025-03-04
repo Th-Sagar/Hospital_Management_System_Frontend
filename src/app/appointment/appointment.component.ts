@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AppointmentService } from '../appointment.service';
 import { Appointment } from '../appointment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-appointment',
@@ -18,6 +19,13 @@ export class AppointmentComponent {
   getAppointments() {
     this.appointmentService.getAllAppointments().subscribe((res) => {
       this.appointments = res;
+    });
+  }
+
+  delete(id: number) {
+    this.appointmentService.deleteAppointment(id).subscribe((res) => {
+      console.log(res);
+      this.getAppointments();
     });
   }
 }

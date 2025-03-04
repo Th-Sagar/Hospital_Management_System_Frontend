@@ -86,6 +86,7 @@
           <th>Symptoms</th>
 
           <th>Number</th>
+          <th>Action</th>
         </tr>
       </thead>
 
@@ -109,6 +110,12 @@
 
           <td>
             {{ appointment.number }}
+          </td>
+
+          <td>
+            <button (click)="delete(appointment.id)" class="btn btn-danger">
+              Delete
+            </button>
           </td>
         </tr>
       </tbody>
