@@ -19,8 +19,8 @@
           class="nav-link active"
           aria-current="page"
           href="javascript:void(0);"
-          routerLink="/appointmentlist"
-          >Appointments</a
+          routerLink="/admin"
+          >Back</a
         >
       </li>
     </ul>
@@ -42,22 +42,22 @@
 
 <div class="container">
   <hr />
-  <h2 style="text-align: center; margin-top: 20px">Admin Dashboard</h2>
+  <h2 style="text-align: center; margin-top: 20px">Appointments</h2>
   <a style="color: rgb(86, 86, 86); font-size: x-large"
     ><marquee behavior="scroll" direction="left">
-      Welcome to Admin Dashboard. Please find the patient list below!!. Click
-      Appointments to view and update Appointments, Click Add Appointment to add
-      new Appointment</marquee
+      Welcome to Appointments Dashboard. Please find the patient list below!!.
+      Click Appointments to view and update Appointments, Click Add Appointment
+      to add new Appointment</marquee
     ></a
   >
   <hr />
   <!-- <input
-    type="text"
-    name="search"
-    [(ngModel)]="searchText"
-    placeholder="Search"
-    (input)="searchPatients()"
-  /> -->
+      type="text"
+      name="search"
+      [(ngModel)]="searchText"
+      placeholder="Search"
+      (input)="searchPatients()"
+    /> -->
   <br />
   <a style="color: rgb(86, 86, 86); font-size: xx-large"
     >Current Patient List in the Queue</a
@@ -73,50 +73,32 @@
 
           <th>Age</th>
 
-          <th>Blood</th>
+          <th>Symptoms</th>
 
-          <th>Prescription</th>
-
-          <th>Dose</th>
-
-          <th>Fees</th>
-
-          <th>Urgency</th>
+          <th>Number</th>
         </tr>
       </thead>
 
       <tbody>
-        <tr *ngFor="let patient of patients">
+        <tr *ngFor="let appointment of appointments">
           <td>
-            {{ patient.id }}
+            {{ appointment.id }}
           </td>
 
           <td>
-            {{ patient.name }}
+            {{ appointment.name }}
           </td>
 
           <td>
-            {{ patient.age }}
+            {{ appointment.age }}
           </td>
 
           <td>
-            {{ patient.blood }}
+            {{ appointment.symptoms }}
           </td>
 
           <td>
-            {{ patient.prescription }}
-          </td>
-
-          <td>
-            {{ patient.dose }}
-          </td>
-
-          <td>
-            {{ patient.fees }}
-          </td>
-
-          <td>
-            {{ patient.urgency }}
+            {{ appointment.number }}
           </td>
         </tr>
       </tbody>
