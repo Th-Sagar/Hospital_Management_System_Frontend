@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { CreateApppointmentComponent } from './create-apppointment/create-apppointment.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,15 @@ const routes: Routes = [
   {
     path: 'create-appointment',
     component: CreateApppointmentComponent,
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
 ];
 
