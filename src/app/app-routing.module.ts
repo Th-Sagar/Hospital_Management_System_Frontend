@@ -4,6 +4,7 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
 import { AppointmentComponent } from './appointment/appointment.component';
 import { CreateApppointmentComponent } from './create-apppointment/create-apppointment.component';
 import { HomeComponent } from './home/home.component';
+import { DocdashComponent } from './docdash/docdash.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'docdash',
+    component: DocdashComponent,
   },
   {
     path: '',

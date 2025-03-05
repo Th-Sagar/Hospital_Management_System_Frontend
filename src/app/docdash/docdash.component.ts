@@ -1,0 +1,32 @@
+import { Component } from '@angular/core';
+import { Patient } from '../patient';
+import { PatientService } from '../patient.service';
+
+@Component({
+  selector: 'app-docdash',
+  standalone: false,
+  templateUrl: './docdash.component.html',
+  styleUrl: './docdash.component.css',
+})
+export class DocdashComponent {
+  constructor(private patientService: PatientService) {}
+
+  patients: Patient[] = [];
+
+  ngOnInit(): void {
+    this.getPatients();
+  }
+
+  getPatients() {
+    this.patientService.getPatientList().subscribe((res) => {
+      this.patients = res;
+      console.log(res);
+    });
+  }
+
+  delete(id: number) {
+    this.patientService.deletePatient(id).subscribe((res) => {
+      console.log(res);
+    });
+  }
+}
