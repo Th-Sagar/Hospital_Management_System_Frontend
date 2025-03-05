@@ -5,6 +5,7 @@ import { AppointmentComponent } from './appointment/appointment.component';
 import { CreateApppointmentComponent } from './create-apppointment/create-apppointment.component';
 import { HomeComponent } from './home/home.component';
 import { DocdashComponent } from './docdash/docdash.component';
+import { CreatePatientComponent } from './create-patient/create-patient.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'create-patient',
+    component: CreatePatientComponent,
   },
   {
     path: 'docdash',
