@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { DocdashComponent } from './docdash/docdash.component';
 import { CreatePatientComponent } from './create-patient/create-patient.component';
+import { MedicinelistComponent } from './medicinelist/medicinelist.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CreatePatientComponent } from './create-patient/create-patient.componen
     HomeComponent,
     DocdashComponent,
     CreatePatientComponent,
+    MedicinelistComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

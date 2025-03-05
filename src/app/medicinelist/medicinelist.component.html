@@ -20,7 +20,7 @@
           aria-current="page"
           href="javascript:void(0);"
           routerLink="/create-patient"
-          >Add Patient</a
+          >Add Medicine</a
         >
       </li>
 
@@ -30,8 +30,8 @@
           class="nav-link active"
           aria-current="page"
           href="javascript:void(0);"
-          routerLink="/view-medicine"
-          >View Medicines</a
+          routerLink="/docdash"
+          >Back</a
         >
       </li>
     </ul>
@@ -56,22 +56,22 @@
   <h2 style="text-align: center; margin-top: 20px">Admin Dashboard</h2>
   <a style="color: rgb(86, 86, 86); font-size: x-large"
     ><marquee behavior="scroll" direction="left">
-      Welcome to Dashboard. Please find the patient list below!!. Click Add
-      Patient to view and update Patient, Click Add Patient to add new
+      Welcome to Dashboard. Please find the Medicine list below!!. Click Add
+      Medicine to view and update Medicine, Click Add Medicine to add new
       Patient</marquee
     ></a
   >
   <hr />
   <!-- <input
-      type="text"
-      name="search"
-      [(ngModel)]="searchText"
-      placeholder="Search"
-      (input)="searchPatients()"
-    /> -->
+        type="text"
+        name="search"
+        [(ngModel)]="searchText"
+        placeholder="Search"
+        (input)="searchPatients()"
+      /> -->
   <br />
   <a style="color: rgb(86, 86, 86); font-size: xx-large"
-    >Current Patient List in the Queue</a
+    >Current Medicine List in the Queue</a
   >
   <div class="tableFixHead">
     <br />
@@ -80,59 +80,30 @@
         <tr>
           <th>ID</th>
 
-          <th>Name</th>
+          <th>Drug Name</th>
 
-          <th>Age</th>
+          <th>Stock</th>
 
-          <th>Blood</th>
-
-          <th>Prescription</th>
-
-          <th>Dose</th>
-
-          <th>Fees</th>
-
-          <th>Urgency</th>
           <th>Action</th>
         </tr>
       </thead>
 
       <tbody>
-        <tr *ngFor="let patient of patients">
+        <tr *ngFor="let medicine of medicines">
           <td>
-            {{ patient.id }}
+            {{ medicine.id }}
           </td>
 
           <td>
-            {{ patient.name }}
+            {{ medicine.drugName }}
           </td>
 
           <td>
-            {{ patient.age }}
+            {{ medicine.stock }}
           </td>
 
           <td>
-            {{ patient.blood }}
-          </td>
-
-          <td>
-            {{ patient.prescription }}
-          </td>
-
-          <td>
-            {{ patient.dose }}
-          </td>
-
-          <td>
-            {{ patient.fees }}
-          </td>
-
-          <td>
-            {{ patient.urgency }}
-          </td>
-
-          <td>
-            <button class="btn btn-danger" (click)="delete(patient.id)">
+            <button class="btn btn-danger" (click)="delete(medicine.id)">
               Delete
             </button>
           </td>

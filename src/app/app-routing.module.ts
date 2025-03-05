@@ -6,6 +6,7 @@ import { CreateApppointmentComponent } from './create-apppointment/create-apppoi
 import { HomeComponent } from './home/home.component';
 import { DocdashComponent } from './docdash/docdash.component';
 import { CreatePatientComponent } from './create-patient/create-patient.component';
+import { MedicinelistComponent } from './medicinelist/medicinelist.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'create-patient',
     component: CreatePatientComponent,
+  },
+  {
+    path: 'view-medicine',
+    component: MedicinelistComponent,
   },
   {
     path: 'docdash',
