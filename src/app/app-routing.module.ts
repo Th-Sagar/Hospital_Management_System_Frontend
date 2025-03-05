@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { DocdashComponent } from './docdash/docdash.component';
 import { CreatePatientComponent } from './create-patient/create-patient.component';
 import { MedicinelistComponent } from './medicinelist/medicinelist.component';
+import { CreateMedicineComponent } from './create-medicine/create-medicine.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'create-patient',
     component: CreatePatientComponent,
+  },
+  {
+    path: 'create-medicine',
+    component: CreateMedicineComponent,
   },
   {
     path: 'view-medicine',
