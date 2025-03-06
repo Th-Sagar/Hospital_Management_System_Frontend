@@ -11,10 +11,32 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class UpdateMedicineComponent {
   medicine: Medicine = new Medicine();
+
+  id: number = 0;
+
   constructor(
     private medicineService: MedicineService,
     private route: ActivatedRoute,
     private router: Router
   ) {}
-  onSubmit() {}
+
+  ngOnInit(): void {
+    this.id = this.route.snapshot.params['id'];
+    this.medicineService.getMedicineById(this.id).subscribe((res) => {
+      this.medicine = res;
+    });
+  }
+
+  onSubmit() {
+    this.medicineService
+      .updateMedicine(this.id, this.medicine)
+      .subscribe((res) => {
+        console.log(res);
+        this.goToMedicineList();
+      });
+  }
+
+  goToMedicineList() {
+    this.router.navigate(['/view-medicine']);
+  }
 }
