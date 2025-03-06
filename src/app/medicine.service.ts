@@ -29,4 +29,8 @@ export class MedicineService {
       medicine
     );
   }
+
+  deleteMedicine(id: number): Observable<object> {
+    return this.httpClient.delete(`${this.baseUrl}/medicines/${id}`);
+  }
 }
