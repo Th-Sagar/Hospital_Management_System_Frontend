@@ -28,6 +28,7 @@ export class DocdashComponent {
   delete(id: number) {
     this.patientService.deletePatient(id).subscribe((res) => {
       console.log(res);
+      this.getPatients();
     });
   }
 
