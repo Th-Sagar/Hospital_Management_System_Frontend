@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Patient } from '../patient';
 import { PatientService } from '../patient.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-docdash',
@@ -9,7 +10,7 @@ import { PatientService } from '../patient.service';
   styleUrl: './docdash.component.css',
 })
 export class DocdashComponent {
-  constructor(private patientService: PatientService) {}
+  constructor(private patientService: PatientService, private router: Router) {}
 
   patients: Patient[] = [];
 
@@ -28,5 +29,9 @@ export class DocdashComponent {
     this.patientService.deletePatient(id).subscribe((res) => {
       console.log(res);
     });
+  }
+
+  update(id: number) {
+    this.router.navigate(['update-patient', id]);
   }
 }
