@@ -30,8 +30,8 @@
           class="nav-link active"
           aria-current="page"
           href="javascript:void(0);"
-          routerLink="/view-medicine"
-          >View Medicines</a
+          routerLink="/docdash"
+          >Back</a
         >
       </li>
     </ul>
@@ -63,12 +63,12 @@
   >
   <hr />
   <!-- <input
-      type="text"
-      name="search"
-      [(ngModel)]="searchText"
-      placeholder="Search"
-      (input)="searchPatients()"
-    /> -->
+        type="text"
+        name="search"
+        [(ngModel)]="searchText"
+        placeholder="Search"
+        (input)="searchPatients()"
+      /> -->
   <br />
   <a style="color: rgb(86, 86, 86); font-size: xx-large"
     >Current Patient List in the Queue</a
@@ -86,13 +86,18 @@
 
           <th>Blood</th>
 
+          <th>Prescription</th>
+
+          <th>Dose</th>
+
+          <th>Fees</th>
+
           <th>Urgency</th>
-          <th>Action</th>
         </tr>
       </thead>
 
       <tbody>
-        <tr *ngFor="let patient of patients">
+        <tr>
           <td>
             {{ patient.id }}
           </td>
@@ -110,20 +115,19 @@
           </td>
 
           <td>
-            {{ patient.urgency }}
+            {{ patient.prescription }}
           </td>
 
           <td>
-            <button class="btn btn-info" (click)="update(patient.id)">
-              Update
-            </button>
+            {{ patient.dose }}
+          </td>
 
-            <button class="btn btn-danger mx-2" (click)="delete(patient.id)">
-              Delete
-            </button>
-            <button class="btn btn-success mx-2" (click)="view(patient.id)">
-              View
-            </button>
+          <td>
+            {{ patient.fees }}
+          </td>
+
+          <td>
+            {{ patient.urgency }}
           </td>
         </tr>
       </tbody>

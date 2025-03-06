@@ -35,4 +35,8 @@ export class DocdashComponent {
   update(id: number) {
     this.router.navigate(['update-patient', id]);
   }
+
+  view(id: number) {
+    this.router.navigate(['/view-patient', id]);
+  }
 }
