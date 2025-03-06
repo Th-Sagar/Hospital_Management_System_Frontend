@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MedicineService } from '../medicine.service';
 import { Medicine } from '../medicine';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-medicinelist',
@@ -10,7 +11,10 @@ import { Medicine } from '../medicine';
 })
 export class MedicinelistComponent {
   medicines: Medicine[] = [];
-  constructor(private medicineService: MedicineService) {}
+  constructor(
+    private medicineService: MedicineService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getMedicine();
@@ -24,4 +28,8 @@ export class MedicinelistComponent {
   }
 
   delete(id: number) {}
+
+  update(id: number) {
+    this.router.navigate(['update-medicine', id]);
+  }
 }
