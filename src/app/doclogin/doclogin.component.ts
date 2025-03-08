@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DocauthService } from '../docauth.service';
 
 @Component({
   selector: 'app-doclogin',
@@ -13,16 +14,15 @@ export class DocloginComponent {
 
   isValidLogin = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private docAuthService: DocauthService) {}
   checkLogin() {
-    if (this.username == 'ram' && this.password == 'ram123') {
-      sessionStorage.setItem('username', this.username);
+    if (this.docAuthService.authenticate(this.username, this.password)) {
       this.router.navigate(['docdash']);
-      return true;
+      this.isValidLogin = false;
     } else {
+      this.isValidLogin = true;
       alert('Wrong credinitals');
       this.router.navigate(['home']);
-      return false;
     }
   }
 }
