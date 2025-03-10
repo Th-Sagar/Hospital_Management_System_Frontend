@@ -9,7 +9,9 @@ import { Patient } from './patient';
 export class PatientService {
   constructor(private httpClient: HttpClient) {}
 
-  private baseUrl = 'http://localhost:9090/api/v1';
+  // private baseUrl = 'http://localhost:9090/api/v1';
+  private baseUrl =
+    'https://hospital-management-system-backend-pkob.onrender.com/api/v1';
 
   getPatientList(): Observable<Patient[]> {
     return this.httpClient.get<Patient[]>(`${this.baseUrl}`);
