@@ -1,0 +1,10 @@
+﻿/admin,Admin Dashboard,Admin (Guarded)
+/appointmentlist,Appointment List,Admin (Guarded)
+/create-appointment,Create Appointment,Admin (Guarded)
+/docdash,Doctor Dashboard,Doctor (Guarded)
+/create-patient,Patient Registration,Doctor (Guarded)
+/create-medicine,Medicine Registration,Doctor (Guarded)
+/view-medicine,Medicine List,Doctor (Guarded)
+/adlogin,Admin Login,Public
+/doclogin,Doctor Login,Public
+/home,Home Page,Public
