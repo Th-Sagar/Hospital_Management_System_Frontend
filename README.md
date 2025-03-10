@@ -27,11 +27,14 @@ This Angular project provides a web-based interface for managing hospital operat
 - Node.js 18+
 - Angular CLI 19.1.7
 
-````bash
+```bash
 npm install -g @angular/cli@19.1.7
+```
 
 ## Installation
+
 Clone the repository
+
 ```bash
 git clone https://github.com/your-username/hospital-management-frontend.git
-````
+```
