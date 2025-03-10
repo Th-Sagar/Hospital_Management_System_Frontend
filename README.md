@@ -1,59 +1,37 @@
-# Fronted For Hospital Management System
+# Frontend for Hospital Management System
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+This Angular project provides a web-based interface for managing hospital operations, including patient records, appointments, and medical inventory. The application features role-based access control for administrators and doctors.
 
-## Development server
+## Table of Contents
 
-To start a local development server, run:
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Routing Structure](#routing-structure)
+- [Development](#development)
+- [Testing](#testing)
+- [Built With](#built-with)
+- [Contributing](#contributing)
 
+## Features
+
+- **Role-based Access**: Separate dashboards for Admins and Doctors
+- **Patient Management**: Create, view, and update patient records
+- **Appointment Scheduling**: Manage medical appointments
+- **Medicine Inventory**: Track and manage medical supplies
+- **Authentication**: Secure login for admin and doctor roles
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- Angular CLI 19.1.7
+
+````bash
+npm install -g @angular/cli@19.1.7
+
+## Installation
+Clone the repository
 ```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+git clone https://github.com/your-username/hospital-management-frontend.git
+````
