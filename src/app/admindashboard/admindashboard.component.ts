@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { PatientService } from '../patient.service';
 import { Patient } from '../patient';
+import { AdminauthService } from '../adminauth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admindashboard',
@@ -10,7 +12,11 @@ import { Patient } from '../patient';
 })
 export class AdmindashboardComponent {
   patients: Patient[] = [];
-  constructor(private patientService: PatientService) {}
+  constructor(
+    private patientService: PatientService,
+    private adminauthService: AdminauthService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getPatients();
@@ -27,5 +33,9 @@ export class AdmindashboardComponent {
       console.log(res);
       this.getPatients();
     });
+  }
+  logout() {
+    this.adminauthService.logout();
+    this.router.navigate(['home']);
   }
 }
