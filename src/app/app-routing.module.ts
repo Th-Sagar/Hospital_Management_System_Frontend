@@ -14,6 +14,7 @@ import { UpdateMedicineComponent } from './update-medicine/update-medicine.compo
 import { DocloginComponent } from './doclogin/doclogin.component';
 import { AdloginComponent } from './adlogin/adlogin.component';
 import { AdminauthguardService } from './adminauthguard.service';
+import { DoctorauthguardService } from './doctorauthguard.service';
 
 const routes: Routes = [
   {
@@ -46,30 +47,37 @@ const routes: Routes = [
   {
     path: 'create-patient',
     component: CreatePatientComponent,
+    canActivate: [DoctorauthguardService],
   },
   {
     path: 'create-medicine',
     component: CreateMedicineComponent,
+    canActivate: [DoctorauthguardService],
   },
   {
     path: 'view-medicine',
     component: MedicinelistComponent,
+    canActivate: [DoctorauthguardService],
   },
   {
     path: 'view-patient/:id',
     component: ViewPatientComponent,
+    canActivate: [DoctorauthguardService],
   },
   {
     path: 'update-medicine/:id',
     component: UpdateMedicineComponent,
+    canActivate: [DoctorauthguardService],
   },
   {
     path: 'update-patient/:id',
     component: UpdatePatientComponent,
+    canActivate: [DoctorauthguardService],
   },
   {
     path: 'docdash',
     component: DocdashComponent,
+    canActivate: [DoctorauthguardService],
   },
   {
     path: '',

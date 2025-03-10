@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Patient } from '../patient';
 import { PatientService } from '../patient.service';
 import { Router } from '@angular/router';
+import { DocauthService } from '../docauth.service';
 
 @Component({
   selector: 'app-docdash',
@@ -10,7 +11,11 @@ import { Router } from '@angular/router';
   styleUrl: './docdash.component.css',
 })
 export class DocdashComponent {
-  constructor(private patientService: PatientService, private router: Router) {}
+  constructor(
+    private patientService: PatientService,
+    private router: Router,
+    private docAuth: DocauthService
+  ) {}
 
   patients: Patient[] = [];
 
@@ -38,5 +43,9 @@ export class DocdashComponent {
 
   view(id: number) {
     this.router.navigate(['/view-patient', id]);
+  }
+  logout() {
+    this.docAuth.logout();
+    this.router.navigate(['home']);
   }
 }
