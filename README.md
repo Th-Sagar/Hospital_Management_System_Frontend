@@ -5,7 +5,7 @@ This Angular project provides a web-based interface for managing hospital operat
 ## Table of Contents
 
 - [Features](#features)
-- [Live Demo](#Live Demo)
+- [Live Demo](#live-demo)
 - [Getting Started](#getting-started)
 - [Routing Structure](#routing-structure)
 - [Development](#development)
