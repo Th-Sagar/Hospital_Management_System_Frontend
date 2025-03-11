@@ -5,6 +5,7 @@ This Angular project provides a web-based interface for managing hospital operat
 ## Table of Contents
 
 - [Features](#features)
+- [Live Demo](#Live Demo)
 - [Getting Started](#getting-started)
 - [Routing Structure](#routing-structure)
 - [Development](#development)
@@ -19,6 +20,10 @@ This Angular project provides a web-based interface for managing hospital operat
 - **Appointment Scheduling**: Manage medical appointments
 - **Medicine Inventory**: Track and manage medical supplies
 - **Authentication**: Secure login for admin and doctor roles
+
+## Live Demo
+
+Check out the live demo of the application: [Hospital Management System](https://angular-spring-hms.netlify.app/home)
 
 ## Getting Started
 
