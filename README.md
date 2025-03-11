@@ -23,7 +23,7 @@ This Angular project provides a web-based interface for managing hospital operat
 
 ## Live Demo
 
-Check out the live demo of the application: [Hospital Management System](https://angular-spring-hms.netlify.app/home)
+Check out the live demo of the application: [Hospital Management System](https://angular-spring-hms.netlify.app)
 
 ## Getting Started
 
