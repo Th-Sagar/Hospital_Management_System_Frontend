@@ -8,8 +8,7 @@ import { Medicine } from './medicine';
 })
 export class MedicineService {
   // baseUrl: string = 'http://localhost:9090/api/v3';
-  private baseUrl =
-    'https://hospital-management-system-backend-pkob.onrender.com/api/v3';
+  private baseUrl = 'https://hms-xqmn.onrender.com/api/v3';
 
   constructor(private httpClient: HttpClient) {}
 

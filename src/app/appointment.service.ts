@@ -9,8 +9,7 @@ import { Appointment } from './appointment';
 export class AppointmentService {
   constructor(private httpClient: HttpClient) {}
   // private baseUrl = 'http://localhost:9090/api/v2';
-  private baseUrl =
-    'https://hospital-management-system-backend-pkob.onrender.com/api/v2';
+  private baseUrl = 'https://hms-xqmn.onrender.com/api/v2';
 
   getAllAppointments(): Observable<Appointment[]> {
     return this.httpClient.get<Appointment[]>(`${this.baseUrl}`);
